@@ -1,0 +1,30 @@
+name: PunchBlockPVP
+main: com.github.margeobur.PunchBlockPVP.PunchBlockPVP
+version: 1.5
+author: margeobur
+description: PvP enabler and initiation handler for BlockPunch NZ MC server.
+depend: [Votifier, PvPManager, PermissionsEx]
+commands:
+  pvpon:
+    description: This command selects your choice as being PvP-on. 
+    usage: Type /pvpon, then type /pvpyes to set as PvP-on and join the server.
+    permission: punchblockpvp.newuser
+    permission-message: You aren't a new player. This command is only for new players.
+  pvpoff:
+    description: This command selects your choice as being PvP-off. 
+    usage: Type /pvpoff, then type /pvpyes to set as PvP-off and join the server.
+    permission: punchblockpvp.newuser
+    permission-message: You aren't a new player. This command is only for new players.
+  pvpyes:
+    description: This command is for comfirming your PvP choice. 
+    usage: Type /pvpyes after you have typed either /pvpon or /pvpoff.  This activates your choice and lets you into the server.
+    permission: punchblockpvp.newuser
+    permission-message: You aren't a new player. This command is only for new players.
+  pvpno:
+    description: This command is for aborting your PvP choice and reconsidering. 
+    usage: Type /pvpno to abort your PvP choice and reconsider.
+    permission: punchblockpvp.newuser
+    permission-message: You aren't a new player. This command is only for new players.
+permissions:
+  punchblockpvp.newuser:
+    description: Used to mark new players. Only new players can set their pvp - status, as a once off thing.
